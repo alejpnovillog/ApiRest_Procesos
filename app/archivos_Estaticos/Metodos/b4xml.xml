@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+    xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
+    xmlns:SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/'
+    xmlns:ns1='https://sandbox.epagos.com.ar/'
+    xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/' >
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns1:solicitud_pago soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" >
+            <version xsi:type="xsd:string" >?</version>
+            <tipo_operacion xsi:type="ns0:TipoOperacion" >op_pago</tipo_operacion>
+            <credenciales xsi:type="ns0:DatosCredencialesPago" >
+                <id_organismo xsi:type="xsd:int" >32</id_organismo>
+                <token xsi:type="xsd:string" >6f16c94cc0112e0051bdf667e7f73e1b</token>
+            </credenciales>
+            <operacion xsi:type="ns0:DatosOperacionPago" >
+                <numero_operacion xsi:type="xsd:string" >1</numero_operacion>
+                <identificador_externo_2 xsi:type="xsd:string" ></identificador_externo_2>
+                <identificador_externo_3 xsi:type="xsd:string" ></identificador_externo_3>
+                <id_moneda_operacion xsi:type="xsd:int" >1</id_moneda_operacion>
+                <monto_operacion xsi:type="xsd:float" >50.0</monto_operacion>
+                <opc_pdf xsi:type = "xsd:boolean" >False</opc_pdf>
+                <opc_fecha_vencimiento xsi:type="xsd:date" >2020-09-20</opc_fecha_vencimiento>
+                <opc_devolver_qr xsi:type="xsd:boolean" >True</opc_devolver_qr>
+                <opc_devolver_codbarras xsi:type="xsd:boolean" >True</opc_devolver_codbarras>
+                <detalle_operacion xsi:type="ns0:DetallePagoArray" soapenc:arrayType="ns0:DetallePago[]"/>
+                <fecha_2do_venc xsi:type="xsd:date" ></fecha_2do_venc>
+                <monto_operacion_2do_venc xsi:type="xsd:float">?</monto_operacion_2do_venc>
+                <pagador xsi:type="ns0:DatosPagadorPago" >
+                    <nombre_pagador xsi:type="xsd:string" >juan</nombre_pagador>
+                    <apellido_pagador xsi:type="xsd:string" >Perez</apellido_pagador>
+                    <fechanac_pagador xsi:type="xsd:date" ></fechanac_pagador>
+                    <email_pagador xsi:type="xsd:string" >juanperez@hotmail.com</email_pagador>
+                    <identificacion_pagador xsi:type="ns1:IdentificacionPagador" >
+                        <tipo_doc_pagador xsi:type="xsd:int" >1</tipo_doc_pagador>
+                        <numero_doc_pagador xsi:type="xsd:long" >93871783</numero_doc_pagador>
+                        <cuit_doc_pagador xsi:type="xsd:long" >20938717835</cuit_doc_pagador>
+                    </identificacion_pagador>
+                    <domicilio_pagador xsi:type="ns0:DomicilioPagador" >
+                        <calle_dom_pagador xsi:type="xsd:string" ></calle_dom_pagador>
+                        <numero_dom_pagador xsi:type="xsd:string" ></numero_dom_pagador>
+                        <adicional_dom_pagador xsi:type="xsd:string" ></adicional_dom_pagador>
+                        <cp_dom_pagador xsi:type="xsd:string" ></cp_dom_pagador>
+                        <ciudad_dom_pagador xsi:type="xsd:string" ></ciudad_dom_pagador>
+                        <provincia_dom_pagador xsi:type="xsd:int" ></provincia_dom_pagador>
+                        <pais_dom_pagador xsi:type="xsd:int" ></pais_dom_pagador>
+                    </domicilio_pagador >
+                    <telefono_pagador xsi:type="ns0:TelefonoPagador" >
+                        <codigo_telef_pagador xsi:type="xsd:int" >9</codigo_telef_pagador>
+                        <numero_telef_pagador xsi:type="xsd:int" >1156325669</numero_telef_pagador>
+                    </telefono_pagador>
+                    <cbu_pagador xsi:type="xsd:string" ></cbu_pagador>
+                </pagador>
+            </operacion>
+            <fp SOAP-ENC:arrayType="ns0:DatosFormaPago[1]" xsi:type = "ns0:DatosFormaPagoArray" >
+                <item xsi:type="ns0:DatosFormaPago" >
+                    <id_fp xsi:type="xsd:int" >34</id_fp>
+                    <monto_fp xsi:type="xsd:float" >50.0</monto_fp>
+                    <tarjeta xsi:type="api:FormaPagoTarjeta" ></tarjeta>
+                </item>
+            </fp>
+            <convenio xsi:type="xsd:int" >3032</convenio>
+        </ns1:solicitud_pago>
+    </soapenv:Body>

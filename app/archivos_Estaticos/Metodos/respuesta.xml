@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html>
+<body>
+<soap-env:envelope soap-env:encodingstyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="https://sandbox.epagos.com.ar/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soap-env:body><ns1:solicitud_pagoresponse xmlns:ns1="https://sandbox.epagos.com.ar/">
+<id_resp xsi:type="xsd:string">02002</id_resp>
+<respuesta xsi:type="xsd:string">Pago pendiente</respuesta>
+<id_transaccion xsi:type="xsd:int">330861</id_transaccion>
+<token xsi:type="xsd:string">6af75daab70c52ac172e20d0560cdcf0</token>
+<id_organismo xsi:type="xsd:int">32</id_organismo>
+<numero_operacion xsi:type="xsd:string">1</numero_operacion>
+<convenio xsi:type="xsd:int">3032</convenio>
+<fp soap-enc:arraytype="tns:RespuestaFormaPago[1]" xsi:type="SOAP-ENC:Array">
+<item xsi:type="tns:RespuestaFormaPago">
+
+<codigo_pago_fp xsi:type="xsd:string">278040368</codigo_pago_fp>
+
+<codigo_barras_fp xsi:type="xsd:string">9690000320100000000330861202009200000000050005</codigo_barras_fp>
+
+<fechavenc_fp xsi:type="xsd:date">2020-09-20</fechavenc_fp>
+
+<importe_fp xsi:type="xsd:float">50</importe_fp>
+
+<pdf xsi:type="xsd:base64Binary">b3BjX3BkZiBkZXNhY3RpdmFkbw==</pdf>
+
+<codigo_barras_imagen xsi:type="xsd:base64Binary">iVBORw0KGgoAAAANSUhEUgAAAkAAAAA8AQMAAAC0K5fmAAAABlB MVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAF9JREFUWIXtzLEJwDAMRFGDW4NW0QACry5QG9AqArcBxyFTBH73OY7XlsT0nGlVIT0kxzi5IlKGli3fGjZF5KzX7nnCvkN/U7XKw+9sQEBAQEBAQEBAQEBAQEBAQP+DHq52uwFj2sH/AAAAAElFTkSuQmCC</codigo_barras_imagen>
+
+<qr_imagen xsi:type="xsd:base64Binary">iVBORw0KGgoAAAANSUhEUgAAAKQAAACkAQMAAAAjexcCAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABO0lEQVRIie2W0RHDIAxDtYH239IbuJagNP1G/SuXEnjc1bGRDcC//bh1dxEokPQkRKev5lqo8jxDu4rNnkF7EqRNcKEshaYNRuk84nT/jNkd1Qae9rXHd3SrTSH6Ird0/l/2wHGGUmCIkiKKuxawLd7TVsQn5JMq8+73N1zTkfR4IvHND1skASo39Axy0qRoOatHfCoeE6gKUX39SkR7QIQoJTvv5yz0TpYE1S6WK92udhmqaC9Lo2jFP0QnOKqb2lB7hBB13YSyj67LKSqoKuRajxOza1q2Jhe6+YzOLfUYUp/Gb2sBinNEPZLlnjoBXZDQJ+z3dK2MCmlxV4r2KvfeU51PCFEdoFK07hYq9pWivc9RWz7qy1DYkDpWkKpmtI/qU1LvqQUoedB6SdF1W9FbfnzuBLf0337YXsZp3fEs1+NgAAAAAElFTkSuQmCC</qr_imagen>
+
+<respuesta_entidad_cobro xsi:type="xsd:string">Boleta Generada</respuesta_entidad_cobro>
+
+<codigo_pmc xsi:type="xsd:string">000320100330861</codigo_pmc>
+
+<codigo_link xsi:type="xsd:string">20938717835</codigo_link>
+
+<url_qr xsi:type="xsd:string">https://postsandbox.epagos.com.ar/?hash=a354bffc68f96f592955eea29a7da0ce</url_qr>
+
+<cuit_cuenta xsi:nil="true" xsi:type="xsd:string"></cuit_cuenta>
+
+<cbu_cuenta xsi:nil="true" xsi:type="xsd:string"></cbu_cuenta>
+
+</item>
+</fp>
+</ns1:solicitud_pagoresponse>
+</soap-env:body>
+</soap-env:envelope>
+</body>
+</html>
