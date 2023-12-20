@@ -78,7 +78,7 @@ class ConfigHost(object):
         if os.getcwd().split('\\')[-1] == constantes.DIR_PROYECTO:         #'ProyectoRegistrosAutomotor':
             self.__pathHost = os.getcwd() + '\\archivos_Estaticos\\Host\\'
         else:
-            os.chdir('..')
+            #os.chdir('..')
 
             # determinamos en que plataforma estamos ejeutando el script
             if platform.system() == 'Linux':
@@ -611,10 +611,12 @@ class ConfigHost(object):
         retorno = False
         for k, v in self.__host_dict.items():
             if self.host == k:
+                print('-' * 160)
                 print('{} = {} '.format(k, v))
                 return True
 
             if self.host == '*all':
+                print('-' * 160)
                 print('{} = {} '.format(k, v))
                 retorno = True
 

@@ -76,7 +76,7 @@ HTML_WRKESTADOS = 'estadowrk.html'
 SECRET = '123'
 
 # Directorio del Proyecto
-DIR_PROYECTO = 'ApiRest_Sucerp'
+DIR_PROYECTO = 'app'
 
 
 PATH_EPAGOS_IMAGENES    = "C:\\Epagos\\archivos_Estaticos\\Imagenes\\"

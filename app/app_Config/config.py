@@ -20,12 +20,13 @@ class ConfigurarAplicacion(object):
     TEST_ISERIES    = "Iseries_tst"
     PROD_ISERIES    = "Iseries_prd"
 
+    PUB400_LIB = "Pub400"
 
     # Ambientes
     ENV_SOURCE  = POSTGRESQL_GXPROD
     ENV_TARGET  = PROD_ISERIES
     ENV_MATANZA = None
-    ENV_GX      = PROD_ISERIES
+    ENV_GX      = PUB400_LIB # PROD_ISERIES
     ENV_GX_TEST = TEST_ISERIES
     ENV_DDS     = 'IseriesDDSEpagos_Prd'
     ENV_SQ      = None
@@ -39,6 +40,15 @@ class ConfigurarAplicacion(object):
 
     SERVER_HTTP_DEVELOPMENT = 'http://localhost:5000'
     SERVER_HTTP_PRODUCTION  = 'http://MLMSRV:5000'
+
+    JVMPATH_WINDOWS = 'C:\\Program Files\\Java\\jre1.8.0_331\\bin\\server\\jvm.dll'
+    JVMPATH_LINUX = '/usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so'
+
+    ADDCLASSPATH_WINDOWS  = 'C:\Software\JtOpen\lib\*'
+    ADDCLASSPATH_LINUX  = '/home/anovillo/Escritorio/Jtopen/JtOpen/lib/*'
+
+    JARPATH_WINDOWS = 'C:\\Users\\anovillo\\Desktop\\Software\\JtOpen\\lib\\jt400.jar'
+    JARPATH_LINUX = '/home/anovillo/Escritorio/Jtopen/JtOpen/lib/jt400.jar'
 
 
     # Tablas Id
@@ -545,8 +555,6 @@ class ConfigurarAplicacion(object):
 
 
 
-
-
     PATH_EPAGOS_IMAGENES = "C:\\Epagos\\archivos_Estaticos\\Imagenes\\"
     URL_EPAGOS_MOSTRADOR = "http://172.16.5.105:5000/epagos/mostrador"
     HEADER_CONTENT_JSON = "!'Content-type',!'application/json'"
@@ -581,3 +589,7 @@ class ConfigurarAplicacion(object):
     # Atributo unnitest
     TESTER_LCL = 'LCL'
     TESTER_RMT = 'RMT'
+
+    # Directorio del Proyecto
+    DIR_PROYECTO = 'ApiSucerp_Procesos/app'
+
