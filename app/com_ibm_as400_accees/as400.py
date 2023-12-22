@@ -410,11 +410,253 @@ class AS400():
             return self.system.isConnected()
 
 
+    # ***    
+    # Verificación si el sistema esta todavia trabajando
+    def isConnectionLiveAs400(self, servicio: int = None)-> bool:
+        """
 
 
+            servicio (int, optional): _description_. Defaults to None.
+
+        Returns:
+            bool: _description_
+        """
+
+        if servicio != None:
+            return self.system.isConnectedLive(servicio)
+        else:
+            return self.system.isConnectedLive()
 
 
+    # ***
+    # Retorna el mode de Sign-on para este objeto
+    def isGuiAvailableAs400(self)-> bool:
+        """
+
+        Returns:
+            bool: _description_
+        """
+        return self.system.isGuiAvailable()        
 
 
+    # ***
+    # Retorna si el objeto esta en el sistema corriente
+    def isLocalAs400(self)-> bool:
+        """
+
+        Returns:
+            bool: _description_
+        """
+        return self.system.isLocal()
 
 
+    # ***
+    # Indica si este objeto intentará agregar la biblioteca de idioma secundario 
+    # adecuada a la lista de bibliotecas cuando se ejecute en el sistema.
+    def isMustAddLanguageLibraryAs400(self)-> bool:
+        """
+
+        Returns:
+            bool: _description_
+        """
+        return self.system.isMutAddLanguageLibrary()
+    
+
+    # ***
+    # Indica si solo se utilizarán sockets de dominio de Internet.
+    def isMustUseNetSocketAs400(self)-> bool:
+        """
+
+        Returns:
+            bool: _description_
+        """
+        return self.system.isMustUseNetSocket()
+    
+
+    # ***
+    # Indica si solo se utilizará un perfil proporcionado.
+    def isMustUseSuppliedProfileAs400(self)-> bool:
+        """
+
+        Returns:
+            bool: _description_
+        """
+        return self.system.isMustUseSuppliedProfile()
+
+
+    # ***
+    # Indica si se deben mostrar casillas de verificación 
+    # en el cuadro de diálogo de inicio de sesión.
+    def isShowCheckboxesAs400(self)-> bool:
+        """
+
+        Returns:
+            bool: _description_
+        """
+        return self.system.isShowCheckboxes()
+
+
+    # ***
+    # Indica si se utilizan subprocesos en la comunicación 
+    # con los servidores host.
+    def isThreadUsedAs400(self)-> bool:
+        """
+
+        Returns:
+            bool: _description_
+        """
+        return self.system.isThreadUsed()
+    
+
+    # ***
+    # Indica si este objeto debe utilizar el usuario predeterminado.
+    def isUseDefaultUserAs400(self)-> bool:
+        """
+
+        Returns:
+            bool: _description_
+        """
+        return self.system.isUseDefaultUser()
+    
+
+    # ***
+    # Indica si este objeto está utilizando la caché de contraseñas.
+    def isUsePasswordCacheAs400(self)-> bool:
+        """
+
+        Returns:
+            bool: _description_
+        """
+        return self.system.isUsePasswordCache()
+
+
+    # ***
+    # Elimina el usuario predeterminado para el nombre de sistema dado.
+    def removeDefaultUserAs400(self, systemName: str):
+        """
+
+        Args:
+            systemName (str): _description_
+        """
+        return self.system.removeDefaultUser(systemName)
+
+
+    # ***
+    # Elimina la entrada de caché de contraseña asociada 
+    # con este nombre de sistema e ID de usuario.
+    def removePasswordCacheEntryAs400(self, systemName: str, userId: str):
+        """
+
+        Args:
+            systemName (str):   Nombre del Sistema_
+            userId (str):       Id del Usuario
+
+        Returns:
+            
+        """
+
+        return self.system.removePasswordCacheEntry(systemName, userId)
+    
+
+    # ***
+    # Desconecte todos los servicios y borre la información de inicio de sesión.
+    def resetAllServicesAs400(self):
+        """
+
+        Returns:
+           
+        """
+        return self.system.resetAllServices()
+
+
+    # ***
+    # Establece el CCSID que se utilizará para este objeto.
+    def setCcsidAs400(self, ccsid: int):
+        """
+
+        Args:
+            ccsid (int):    Es código de utilización
+
+        Returns:
+            
+        """
+        return  self.system.setCcsid(ccsid)
+    
+
+    # ***
+    # Establece el nombre de la base de datos relacional (nombre RDB) 
+    # utilizado para las conexiones de acceso a nivel de registro (DDM).
+    def setDDMRDBAs400(self, ddmRDB: str):
+        """
+
+        Args:
+            ddmRDB (str):   Es el nombre de la base de datos relacional
+
+        Returns:
+            
+        """
+        return self.system.setDDMRDB(ddmRDB)
+    
+
+
+    # ***
+    # Establece el usuario predeterminado para un nombre de sistema determinado.
+    def setDefaultUserAs400(self, systemName: str, userId: str):
+        """
+
+        Args:
+            systemName (str):       Nombre del sisterma
+            userId (str):           Id del Usuario
+
+        Returns:
+            
+        """
+        return self.system.setDefaultUser(systemName, userId)
+    
+
+    # ***
+    # Establece el nombre GSS para este objeto.
+    def setGSSNameAs400(self, gssName: str):
+        """
+
+        Args:
+            gssName (str):  Nombre del gssName
+
+        Returns:
+           
+        """
+        return self.system.setGSSName(gssName)
+    
+
+    # ***
+    # Establece la opción sobre cómo se utilizará el marco JGSS 
+    # para recuperar un token GSS para autenticarse en el sistema.
+    def setGSSOptionAs400(self, gssOption: int):
+        """
+
+        Args:
+            gssOption (int): _description_
+
+        Returns:
+            
+        """
+        return self.system.setGSSOption(gssOption)
+    
+
+    # ***
+    # Establece el entorno en el que se está ejecutando.
+    def setGuiAvailableAs400(self, guiAvailable: bool):
+        """
+
+        Args:
+            guiAvailable (bool):    Determina si esta habilitada Gui
+
+        Returns:
+            
+        """
+        return self.system.setGuiAvailable(guiAvailable)
+    
+
+
+    # ***
+    # 
